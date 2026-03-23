@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Kanit", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Kanit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #a80033;
+  --color-primary-container: #d31145;
+  /* Trust / care accent (blue–green) */
+  --color-trust: #0f766e;
+  --color-trust-muted: #ccfbf1;
+  --color-secondary: #2563eb;
+  --color-secondary-container: #93c5fd;
+  --color-on-secondary-container: #172554;
+  --color-surface: #fcf9f8;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container: #f0edec;
+  --color-surface-container-high: #ebe7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-on-surface: #1c1b1b;
+  --color-on-surface-variant: #5c3f41;
+  --color-outline-variant: #e4bdbf;
+
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+  --radius-3xl: 1.5rem;
+
+  --shadow-editorial: 0px 12px 32px rgba(28, 27, 27, 0.06);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-headline tracking-tight;
+  }
+}
+
+.glass-nav {
+  background: rgba(252, 249, 248, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.gradient-primary {
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-container));
+}
